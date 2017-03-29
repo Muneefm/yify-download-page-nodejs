@@ -7,14 +7,23 @@ var path = require("path");
 var mongo = require('mongodb').MongoClient;
 var objectId = require('mongodb').ObjectID;
 var assert = require('assert');
+var geoip = require('geoip-lite');
+
 var url = 'mongodb://localhost:27017/yify';
 
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
+
+    var ip = req.headers['x-forwarded-for']
+    var ipDetails = geoip.lookup(ip);
+    console.log(ip);
+    console.log(ipDetails);
+
     var visitorItem = {
-        user_ip: req.headers['x-forwarded-for'],
-        time: Date.now()
+        user_ip: ip,
+        time: Date.now(),
+        ip_geo: ipDetails
     };
 console.log(visitorItem);
 
