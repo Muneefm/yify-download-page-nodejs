@@ -25,12 +25,17 @@ router.get('/', function(req, res, next) {
         time: Date.now(),
         ip_geo: ipDetails
     };
-console.log(visitorItem);
+     console.log(visitorItem);
 
     mongo.connect(url, function(err, db) {
         assert.equal(null, err);
         db.collection('visitor-home').insertOne(visitorItem, function(err, result) {
             assert.equal(null, err);
+            if(err!=null){
+                console.log("error inserting data "+err);
+            }else{
+                console.log("no error in db");
+            }
             console.log('IP  inserted');
             db.close();
         });
