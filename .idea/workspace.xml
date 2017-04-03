@@ -21,8 +21,8 @@
       <file leaf-file-name="landing.ejs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/yify/views/landing.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+            <state relative-caret-position="305">
+              <caret line="212" column="38" lean-forward="true" selection-start-line="212" selection-start-column="38" selection-end-line="212" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -153,10 +153,11 @@
       <find>fancy</find>
       <find>App</find>
       <find>down</find>
-      <find>download</find>
       <find>Present your app in beautiful way with Showapp</find>
       <find>contact</find>
       <find>home/download</find>
+      <find>download</find>
+      <find>movie</find>
     </findStrings>
     <replaceStrings>
       <replace>imagea</replace>
@@ -826,7 +827,7 @@
       <workItem from="1490802979077" duration="7605000" />
       <workItem from="1491023825080" duration="614000" />
       <workItem from="1491128252344" duration="615000" />
-      <workItem from="1491209550266" duration="716000" />
+      <workItem from="1491209550266" duration="898000" />
     </task>
     <task id="LOCAL-00001" summary="port to 81">
       <created>1490704118096</created>
@@ -870,11 +871,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491209743080</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="SEO updates">
+      <created>1491213688628</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1491213688628</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52269000" />
+    <option name="totallyTimeSpent" value="52451000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-241" y="-1080" width="1920" height="1080" extended-state="0" />
@@ -925,7 +933,8 @@
     <MESSAGE value="- geoip" />
     <MESSAGE value="db save fix" />
     <MESSAGE value="apk update ( apk fix for sdk&lt;lollipop)" />
-    <option name="LAST_COMMIT_MESSAGE" value="apk update ( apk fix for sdk&lt;lollipop)" />
+    <MESSAGE value="SEO updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="SEO updates" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1295,8 +1304,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/yify/views/landing.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+        <state relative-caret-position="305">
+          <caret line="212" column="38" lean-forward="true" selection-start-line="212" selection-start-column="38" selection-end-line="212" selection-end-column="38" />
           <folding />
         </state>
       </provider>
