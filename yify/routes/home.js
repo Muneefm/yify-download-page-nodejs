@@ -38,20 +38,20 @@ router.use(function(req,res,next){
 });
 
 router.get('/', function(req, res, next) {
+    res.render('landing');
 
     saveDBHomeVisitor(req.visitorItem);
 
-    res.render('landing');
 
 });
 
 router.get('/download', function(req, res, next) {
 
-
-    saveDBDownloadVisitor(req.visitorItem);
     var file =  path.join(__dirname, '/../public/apk/yify-1.3.apk');
     console.log(file);
     res.download(file);
+    saveDBDownloadVisitor(req.visitorItem);
+
 });
 
 

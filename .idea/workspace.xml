@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d5f5ec0d-3cb2-4553-9333-af4f98af53de" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yify/app.js" afterPath="$PROJECT_DIR$/yify/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yify/routes/home.js" afterPath="$PROJECT_DIR$/yify/routes/home.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,8 +33,8 @@
       <file leaf-file-name="home.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/yify/routes/home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+            <state relative-caret-position="645">
+              <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -832,7 +831,7 @@
       <workItem from="1490802979077" duration="7605000" />
       <workItem from="1491023825080" duration="614000" />
       <workItem from="1491128252344" duration="615000" />
-      <workItem from="1491209550266" duration="4692000" />
+      <workItem from="1491209550266" duration="5861000" />
     </task>
     <task id="LOCAL-00001" summary="port to 81">
       <created>1490704118096</created>
@@ -925,11 +924,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491215038928</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Middleware  user ip &amp; location">
+      <created>1491239217557</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1491239217557</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56245000" />
+    <option name="totallyTimeSpent" value="57414000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-241" y="-1080" width="1920" height="1080" extended-state="0" />
@@ -981,7 +987,8 @@
     <MESSAGE value="db save fix" />
     <MESSAGE value="apk update ( apk fix for sdk&lt;lollipop)" />
     <MESSAGE value="SEO updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="SEO updates" />
+    <MESSAGE value="Middleware  user ip &amp; location" />
+    <option name="LAST_COMMIT_MESSAGE" value="Middleware  user ip &amp; location" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1358,8 +1365,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/yify/routes/home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+        <state relative-caret-position="645">
+          <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
           <folding />
         </state>
       </provider>
