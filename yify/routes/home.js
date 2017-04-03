@@ -7,6 +7,7 @@ var path = require("path");
 var mongo = require('mongodb').MongoClient;
 var objectId = require('mongodb').ObjectID;
 var assert = require('assert');
+
 var geoip = require('geoip-lite');
 
 var url = 'mongodb://localhost:27017/yify';
@@ -20,12 +21,17 @@ router.get('/', function(req, res, next) {
     console.log(ip);
     console.log(ipDetails);
 
+
     var visitorItem = {
         user_ip: ip,
         time: Date.now(),
         ip_geo: ipDetails
     };
      console.log(visitorItem);
+    var visitorCount = { _id:1,
+        $inc: { visit: 1 } }
+
+
 
     mongo.connect(url, function(err, db) {
         assert.equal(null, err);
@@ -37,8 +43,23 @@ router.get('/', function(req, res, next) {
                 console.log("no error in db");
             }
             console.log('IP  inserted');
+           // db.close();
+        });
+
+       /* db.collection('count').updateOne(
+            { $inc: { visit: 1 } }, function(err,result){
+                assert.equal(null, err);
+                console.log("view increased");
+                //db.close();
+
+            });*/
+        db.collection('visitor-count').findOneAndUpdate({_id:1},{$inc:{visit:1}},function (err,result) {
+            assert.equal(null, err);
+            console.log("visitor count increased");
             db.close();
         });
+
+
     });
     res.render('landing');
 
@@ -61,11 +82,28 @@ router.get('/download', function(req, res, next) {
         });
     });
 
-    var file =  path.join(__dirname, '/../public/apk/yify-1.2.apk');
+    var file =  path.join(__dirname, '/../public/apk/yify-1.3.apk');
     console.log(file);
     res.download(file);
 });
 
+
+function updateCount(){
+
+    var resultArray = [];
+    mongo.connect(url, function(err, db) {
+        assert.equal(null, err);
+        var cursor = db.collection('counts').find();
+        cursor.forEach(function(doc, err) {
+            assert.equal(null, err);
+            resultArray.push(doc);
+        }, function() {
+            db.close();
+            res.render('index', {items: resultArray});
+        });
+    });
+
+}
 //app.use(express.static('public/apk.apk'))
 
 
