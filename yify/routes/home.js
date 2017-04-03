@@ -14,10 +14,11 @@ var url = 'mongodb://localhost:27017/yify';
 
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
 
+
+router.use(function(req,res,next){
     var ip = req.headers['x-forwarded-for']
-    var ipDetails = geoip.lookup(ip);
+    var ipDetails =geoip.lookup(ip);
     console.log(ip);
     console.log(ipDetails);
 
@@ -27,61 +28,27 @@ router.get('/', function(req, res, next) {
         time: Date.now(),
         ip_geo: ipDetails
     };
-     console.log(visitorItem);
+    console.log(visitorItem);
     var visitorCount = { _id:1,
         $inc: { visit: 1 } }
 
+      req.visitorItem = visitorItem;
+    next();
 
+});
 
-    mongo.connect(url, function(err, db) {
-        assert.equal(null, err);
-        db.collection('visitor-home').insertOne(visitorItem, function(err, result) {
-            assert.equal(null, err);
-            if(err!=null){
-                console.log("error inserting data "+err);
-            }else{
-                console.log("no error in db");
-            }
-            console.log('IP  inserted');
-           // db.close();
-        });
+router.get('/', function(req, res, next) {
 
-       /* db.collection('count').updateOne(
-            { $inc: { visit: 1 } }, function(err,result){
-                assert.equal(null, err);
-                console.log("view increased");
-                //db.close();
+    saveDBHomeVisitor(req.visitorItem);
 
-            });*/
-        db.collection('visitor-count').findOneAndUpdate({_id:1},{$inc:{visit:1}},function (err,result) {
-            assert.equal(null, err);
-            console.log("visitor count increased");
-            db.close();
-        });
-
-
-    });
     res.render('landing');
 
 });
 
 router.get('/download', function(req, res, next) {
 
-    var visitorItem = {
-        user_ip: req.headers['x-forwarded-for'],
-        time: Date.now()
-    };
-    console.log(visitorItem);
 
-    mongo.connect(url, function(err, db) {
-        assert.equal(null, err);
-        db.collection('visitor-download').insertOne(visitorItem, function(err, result) {
-            assert.equal(null, err);
-            console.log('IP  inserted');
-            db.close();
-        });
-    });
-
+    saveDBDownloadVisitor(req.visitorItem);
     var file =  path.join(__dirname, '/../public/apk/yify-1.3.apk');
     console.log(file);
     res.download(file);
@@ -107,4 +74,43 @@ function updateCount(){
 //app.use(express.static('public/apk.apk'))
 
 
+function saveDBHomeVisitor(visitorItem){
+    console.log("saveDBHomeVisitor == "+visitorItem);
+
+    mongo.connect(url, function(err, db) {
+        assert.equal(null, err);
+        db.collection('visitor-home').insertOne(visitorItem, function(err, result) {
+            assert.equal(null, err);
+            if(err!=null){
+                console.log("error inserting data "+err);
+            }else{
+                console.log("no error in db");
+            }
+            console.log('IP  inserted');
+            // db.close();
+        });
+
+
+        db.collection('visitor-count').findOneAndUpdate({_id:1},{$inc:{visit:1}},function (err,result) {
+            assert.equal(null, err);
+            console.log("visitor count increased");
+            db.close();
+        });
+
+
+    });
+}
+
+function saveDBDownloadVisitor(visitorItem) {
+    console.log("saveDBDownloadVisitor == "+visitorItem);
+
+    mongo.connect(url, function(err, db) {
+        assert.equal(null, err);
+        db.collection('visitor-download').insertOne(visitorItem, function(err, result) {
+            assert.equal(null, err);
+            console.log('IP  inserted');
+            db.close();
+        });
+    });
+}
 module.exports = router;
