@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5f5ec0d-3cb2-4553-9333-af4f98af53de" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/yify/public/apk/yify-1.5.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yify/routes/home.js" afterPath="$PROJECT_DIR$/yify/routes/home.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yify/views/landing.ejs" afterPath="$PROJECT_DIR$/yify/views/landing.ejs" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,21 +18,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="landing.ejs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="landing.ejs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/yify/views/landing.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3810">
-              <caret line="254" column="43" lean-forward="false" selection-start-line="254" selection-start-column="43" selection-end-line="254" selection-end-column="43" />
+            <state relative-caret-position="305">
+              <caret line="93" column="144" lean-forward="false" selection-start-line="93" selection-start-column="144" selection-end-line="93" selection-end-column="144" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="home.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/yify/routes/home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="49" column="65" lean-forward="false" selection-start-line="49" selection-start-column="65" selection-end-line="49" selection-end-column="65" />
+            <state relative-caret-position="577">
+              <caret line="61" column="32" lean-forward="true" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -198,8 +197,8 @@
         <option value="$PROJECT_DIR$/yify/bin/www" />
         <option value="$PROJECT_DIR$/yify/package.json" />
         <option value="$PROJECT_DIR$/yify/app.js" />
-        <option value="$PROJECT_DIR$/yify/views/landing.ejs" />
         <option value="$PROJECT_DIR$/yify/routes/home.js" />
+        <option value="$PROJECT_DIR$/yify/views/landing.ejs" />
       </list>
     </option>
   </component>
@@ -834,7 +833,7 @@
       <workItem from="1491472853336" duration="31000" />
       <workItem from="1491555693579" duration="428000" />
       <workItem from="1491556800315" duration="2002000" />
-      <workItem from="1492800613867" duration="81000" />
+      <workItem from="1492800613867" duration="483000" />
     </task>
     <task id="LOCAL-00001" summary="port to 81">
       <created>1490704118096</created>
@@ -948,11 +947,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491563955445</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="apk update  startapp ads  v1.5">
+      <created>1492800727094</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1492800727094</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60335000" />
+    <option name="totallyTimeSpent" value="60737000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-241" y="-1080" width="1920" height="1080" extended-state="0" />
@@ -1006,7 +1012,8 @@
     <MESSAGE value="SEO updates" />
     <MESSAGE value="Middleware  user ip &amp; location" />
     <MESSAGE value="New apk ver 1.4 (popcorn times)" />
-    <option name="LAST_COMMIT_MESSAGE" value="New apk ver 1.4 (popcorn times)" />
+    <MESSAGE value="apk update  startapp ads  v1.5" />
+    <option name="LAST_COMMIT_MESSAGE" value="apk update  startapp ads  v1.5" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1300,14 +1307,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yify/views/landing.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3810">
-          <caret line="254" column="43" lean-forward="false" selection-start-line="254" selection-start-column="43" selection-end-line="254" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/yify/npm-debug.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1374,8 +1373,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/yify/routes/home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="49" column="65" lean-forward="false" selection-start-line="49" selection-start-column="65" selection-end-line="49" selection-end-column="65" />
+        <state relative-caret-position="577">
+          <caret line="61" column="32" lean-forward="true" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yify/views/landing.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="93" column="144" lean-forward="false" selection-start-line="93" selection-start-column="144" selection-end-line="93" selection-end-column="144" />
           <folding />
         </state>
       </provider>
