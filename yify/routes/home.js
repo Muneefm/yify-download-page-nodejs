@@ -47,7 +47,7 @@ router.get('/', function(req, res, next) {
 
 router.get('/download', function(req, res, next) {
 
-    var file =  path.join(__dirname, '/../public/apk/yify-1.6.apk');
+    var file =  path.join(__dirname, '/../public/apk/yify-1.7.apk');
     console.log(file);
     res.download(file);
     saveDBDownloadVisitor(req.visitorItem);
